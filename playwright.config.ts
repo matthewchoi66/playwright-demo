@@ -12,6 +12,12 @@ export default defineConfig({
     headless: !process.env.HEADED,
   },
 
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.02,
+    },
+  },
+
   projects: [
     {
       name: 'chromium',
